@@ -1,0 +1,259 @@
+/* GENERAL STYLES */
+
+body {
+    height: 95vh;
+    text-align: center;
+    background-color: #E4D8D5;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+.hide-content {
+    display: none !important;
+}
+
+.message {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    line-height: 1.3;
+    width: 80%;
+    position: absolute;
+    z-index: 10;
+    background: white;
+    margin: 0 auto;
+    left: 5%;
+    right: 5%;
+    /* top: 10%;
+  bottom: 10%; */
+    border-radius: 1%;
+    padding: 1em;
+    margin-bottom: 2%;
+    transition: ease-out;
+    transition: .7s;
+    transform: translateY(0);
+}
+
+.message.hidden {
+    transition-timing-function: ease-in;
+    transition: 1s;
+    transform: translateY(-130%);
+}
+
+.game {
+    opacity: 0;
+}
+
+.game.shown {
+    transition-timing-function: ease-in;
+    transition: 1s;
+    opacity: 1;
+}
+
+.message h1 {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.message p {
+    font-size: 1.2rem;
+    font-family: Verdana, serif;
+}
+
+.rules {
+    text-align: left;
+}
+
+.message_btn {
+    box-shadow: inset 0px 1px 0px 0px #54a3f7;
+    background: linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    background-color: #007dc1;
+    border-radius: 3px;
+    border: 1px solid #124d77;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 13px 22px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #154682;
+}
+
+.myBmessage_btnutton:hover {
+    background: linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+    background-color: #0061a7;
+}
+
+#level-title {
+    margin-top: 0.5em;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: #F17353;
+    line-height: 1.7;
+    height: 18vh;
+}
+
+.container {
+    display: block;
+    width: 95%;
+    margin: auto;
+}
+
+.btn {
+    margin: 3%;
+    display: inline-block;
+    --size: 100vmin;
+    width: calc(var(--size) / 3);
+    height: calc(var(--size) / 3);
+    border: 5px solid black;
+    border-radius: 20%;
+}
+
+.game-over {
+    background-color: #232020;
+    opacity: 0.8;
+}
+
+.red {
+    background-color: #D44554;
+    box-shadow: 0 0 5px #D44554, 0 0 25px #D44554, 0 0 50px #D44554, 0 0 200px #D44554;
+}
+
+.green {
+    background-color: #6CBB53;
+    box-shadow: 0 0 5px #6CBB53, 0 0 25px #6CBB53, 0 0 50px #6CBB53, 0 0 200px #6CBB53;
+}
+
+.blue {
+    background-color: #4563D4;
+    box-shadow: 0 0 5px #4563D4, 0 0 25px #4563D4, 0 0 50px #4563D4, 0 0 200px #4563D4;
+}
+
+.yellow {
+    background-color: #EEE54F;
+    box-shadow: 0 0 5px #EEE54F, 0 0 25px #EEE54F, 0 0 50px #EEE54F, 0 0 200px #EEE54F;
+}
+
+.pressed {
+    box-shadow: 0 0 20px white;
+    background-color: grey;
+}
+
+.game_btn {
+    margin-top: 1.5em;
+}
+
+footer {
+    text-align: left;
+    color: white;
+}
+
+footer p {
+    margin: 15% 1em 0;
+    opacity: 0.8;
+}
+
+@media only screen and (min-width: 800px) {
+    body {
+        height: auto;
+    }
+    .message {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1rem;
+        line-height: 1.2;
+        height: fit-content;
+        max-width: 650px;
+        position: absolute;
+        z-index: 10;
+        background: white;
+        margin: 0 auto;
+        left: 10%;
+        right: 10%;
+        top: 5%;
+        bottom: 5%;
+        border-radius: 1%;
+        padding: 1em 2em 2em;
+    }
+    .message h1 {
+        width: 70%;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+    #level-title {
+        height: 15vh;
+        width: 90%;
+        margin: 0.5em auto;
+        font-size: 1.8rem;
+        color: #FEF2BF;
+        line-height: 1.5;
+    }
+    .btn {
+        margin: 1%;
+        --size: 100vmin;
+        width: calc(var(--size) / 3.5);
+        height: calc(var(--size) / 3.5);
+    }
+    footer {
+        text-align: left;
+        color: white;
+    }
+    footer p {
+        margin: 0;
+        opacity: 0.8;
+    }
+    .game_btn {
+        position: absolute;
+        margin: 0;
+        bottom: 45%;
+        right: 15%;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 30px 20px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #154682;
+    }
+}
+
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+    #level-title {
+        height: 20vh;
+        width: 90%;
+        margin: 0.5em auto;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+    .btn {
+        margin: 1%;
+        display: inline-block;
+        --size: 80vmin;
+        width: calc(var(--size) / 3);
+        height: calc(var(--size) / 3);
+        border: 5px solid black;
+        border-radius: 20%;
+    }
+    .game_btn {
+        position: absolute;
+        margin: 0;
+        bottom: 10%;
+        right: 3%;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 10px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #154682;
+    }
+    footer p {
+        margin: 0 1em 0;
+        opacity: 0.8;
+    }
+}

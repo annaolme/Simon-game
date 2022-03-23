@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+  <div class="message">
+    <div class="messageContent">
+      <h1>Welcome to the SIMON Game!</h1>
+      <div class="rules">
+        <p>1. Press ANY button on the keyboard to start. Simon will give the first signal. Repeat the signal by clicking
+          the same color button.</p>
+        <p>2. Simon will duplicate these first two signals and add one.</p>
+        <p>3. Continue playing as long as you can repeat each sequence of signals correctly.</p>
+        <p>4. If you fail to repeat a sequence exactly, Simon responds with a <strong>"WRONG"</strong> sound. This means you've lost, and
+          the sequence of signals ends.</p>
+        <p>5. You will need to press any button on the keyboard to START the game again.</p>
+      </div>
+      <button class="message_btn">Let's Play!</button>
+    </div>
+  </div>
+
+  <div class="game">
+    <h1 id="level-title">Press Start the Game button to Start</h1>
+    <div class="container">
+      <div class="row">
+
+        <div type="button" id="green" class="btn green"></div>
+
+        <div type="button" id="red" class="btn red"></div>
+      </div>
+
+      <div class="row">
+
+        <div type="button" id="yellow" class="btn yellow"></div>
+        <div type="button" id="blue" class="btn blue"></div>
+
+        
+      </div>
+      <button class="message_btn game_btn">Start over!</button>
+
+    </div>
+
+    <footer>
+      <p>By Anna Olme 2022</p>
+    </footer>
+  </div>  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="game.js"></script>
+  
+</body>
+
+</html>
